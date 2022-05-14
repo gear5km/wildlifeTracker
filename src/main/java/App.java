@@ -16,7 +16,16 @@ public class App {
         get("/reportAnimals", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(new HashMap(), "reportAnimals.hbs");
-
         }, new HandlebarsTemplateEngine());
+
+        post("/reportAnimals/Post", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String inputedRangerName= request.queryParams("rangerName"); // Gets the rangerName
+
+            ranger.employeeList.add(new ranger(inputedRangerName));// posts a rangername to the employee list
+
+            response.redirect("/reportAnimals");
+            return null;
+        });
     }
 }

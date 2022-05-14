@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Animals {
     int id;
     String name;
@@ -9,4 +11,7 @@ public class Animals {
         this.count=count;
 
     }
+
+    static ArrayList<Animals>dataList = new ArrayList<Animals>();
+
 }
