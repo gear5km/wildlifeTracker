@@ -1,5 +1,6 @@
 import static spark.Spark.*;
 import spark.ModelAndView;
+import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.ArrayList;
@@ -8,7 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 public class App {
+
     public static void main(String[] args){
+        staticFiles.location("/public"); // Static files Directory for storing things like CSS and Images
         get("/", (request, response) -> {
             return new ModelAndView(new HashMap(), "index.hbs");
         }, new HandlebarsTemplateEngine());
