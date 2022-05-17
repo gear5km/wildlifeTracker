@@ -28,25 +28,28 @@
                 <label for="rangerName">Enter Username</label>
                 <input id="rangerName" name="rangerName" class="form-control" type="text" >
                 <br>
-                <select class="form-select" aria-label="Default select example">
+                <select name="animalSpotted" class="form-select" aria-label="Default select example">
                     <option selected>Select the Animal Sighted</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option  value="Lion">Lion</option>
+                    <option  value="Giraffe">Giraffe</option>
+                    <option  value="Zebra">Zebra</option>
                 </select>
-                <select class="form-select" aria-label="Default select example">
+                <select name="animalLocation" class="form-select" aria-label="Default select example">
                     <option selected>Select Location</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="North Region">North Region</option>
+                    <option value="Central Region">Central Region</option>
+                    <option value="South Region">South Region</option>
                 </select>
                 <br>
                 <br>
-                <label for="rangerName">How many did you See?</label>
-                <input id="rangerName" name="rangerName" class="form-control" type="text" >
+                <label for="animalCount">How many did you See?</label>
+                <input id="animalCount" name="animalCount" class="form-control" type="text" >
                 <br>
                     <button type="submit" class="btn btn-primary">Post Sighting</button>
             </div>
+        </form>
+        <form action="/">
+            <button class="btn btn-primary">Return to Homepage</button>
         </form>
     </div>
 

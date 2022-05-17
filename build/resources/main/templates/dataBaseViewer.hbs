@@ -20,26 +20,22 @@
         <h4 class="logo">Wildlife Tracker</h4>
     </header>
     <!-- Hero Section -->
-    <div class="container-fluid" style="backgrond-color:green">
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Report Animals</h4>
-                <img src="images/binoculars.jpg" width="400" height="400" alt="" style="border-radius:13em"/>
-                <form action="/reportAnimals">
-                    <button class="btn btn-primary">Register Sightings</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <h4>Search Animals</h4>
-                <img src="images/keyboard.jpg" width="400" height="400" alt="" style="border-radius:13em"/>
-                <br>
-                <form action="/animalsDataBaseView">
-                    <button class="btn btn-primary">See Database</button>
-                </form>
+<div class="container-fluid" style="backgrond-color:green">
+<div class="row">
+    {{#each animalsDataBase}}
+<div class="col-md-6">
+    <h2>{{name}}</h2>
 
-            </div>
-        </div>
-    </div>
+    <p>Animal: {{name}}</p>
+    <p>Numbers {{count}}</p>
+    <p>Reported By Ranger: {{reportedBy}}</p>
+</div>
+    {{/each}}
+</div>
+    <form action="/">
+        <button class="btn btn-primary">Back to Homepage</button>
+    </form>
+</div>
     <!-- Stats Gallery Section -->
     <!-- Footer Section -->
     <footer id="contact">
