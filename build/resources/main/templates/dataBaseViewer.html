@@ -24,11 +24,13 @@
 <div class="row">
     {{#each animalsDataBase}}
 <div class="col-md-6">
-    <h2>{{name}}</h2>
-
-    <p>Animal: {{name}}</p>
-    <p>Numbers {{count}}</p>
-    <p>Reported By Ranger: {{reportedBy}}</p>
+    <div class="container" style="background-color:white; border-radius:3em">
+        <h4>Report By Ranger: {{reportedBy}}</h4>
+        <h5>Time: {{reportedAt}}</h5>
+        <p>Animal: {{name}}</p>
+        <p>Spotted Number {{count}}</p>
+        <p>At Location: {{location}}</p>
+    </div>
 </div>
     {{/each}}
 </div>

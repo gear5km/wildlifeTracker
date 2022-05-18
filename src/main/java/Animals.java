@@ -8,13 +8,14 @@ public class Animals {
 
     String reportedBy;
 
+    String reportedAt;
+
     public Animals (int id, String name, int count){
         this.id=id;
         this.name=name;
         this.count=count;
         this.location=location;
         this.reportedBy=reportedBy;
-
     }
 
     public int getid(){return id;}
@@ -24,6 +25,7 @@ public class Animals {
     public String getLocation(){return location;}
 
     public String getReportedBy(){return reportedBy;}
+    public String getReportedAt(){return reportedAt;}
 
     public void setName(String name) {this.name = name;}
     public void setCount(int count) {this.count = count;}
@@ -31,6 +33,7 @@ public class Animals {
     public void setLocation(String location) {this.location = location;}
 
     public void setReportedBy(String reportedBy) {this.reportedBy = reportedBy;}
+
 
     static ArrayList<Animals>dataList = new ArrayList<Animals>();
 

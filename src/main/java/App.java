@@ -13,12 +13,12 @@ public class App {
     public static void main(String[] args){
         staticFiles.location("/public"); // Static files Directory for storing things like CSS and Images
         get("/", (request, response) -> {
-            return new ModelAndView(new HashMap(), "index.hbs");
+            return new ModelAndView(new HashMap(), "index.html");
         }, new HandlebarsTemplateEngine());
 
         get("/reportAnimals", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(new HashMap(), "reportAnimals.hbs");
+            return new ModelAndView(new HashMap(), "reportAnimals.html");
         }, new HandlebarsTemplateEngine());
 
         post("/reportAnimals/Post", (request, response) -> {
@@ -50,7 +50,7 @@ public class App {
             List<Animals>animalsDataBaseList = connectionDao.displayReports();//Gets all animal objects in database using displayReports() Method
             Map<String,List<Animals>> model=new HashMap<>();
             model.put("animalsDataBase", animalsDataBaseList);
-            return new ModelAndView(model,"dataBaseViewer.hbs");
+            return new ModelAndView(model,"dataBaseViewer.html");
         },new HandlebarsTemplateEngine());
     }
 }

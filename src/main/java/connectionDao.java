@@ -7,7 +7,7 @@ public class connectionDao implements animalsDao{
     //@Override
     public static void addAnimals(Animals newAnimalReport) {
         Sql2o sql2o = new Sql2o("jdbc:postgresql://127.0.0.1:5432/wildlife_tracker", "postgres", "Dabosskimani1");// sql2o object that manages the conncetion to database
-        String sql = "INSERT INTO animals (name, location, count, reportedby) VALUES (:name, :location, :count, :reportedBy)"; // SQL instructions to be executed upon connection to database
+        String sql = "INSERT INTO animals (name, location, count, reportedby, reportedat) VALUES (:name, :location, :count, :reportedBy, now())"; // SQL instructions to be executed upon connection to database
         try (Connection con = sql2o.open()) { //binds variable to sql2o open sql communication with database
             int id = (int) con.createQuery(sql, false)// Runs a Query using the input in the sql variable- INSERT INTO ...
                     //.addParameter("name",matchNameInput)// Binds name parameter with matchNameInput Variable
