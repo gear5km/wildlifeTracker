@@ -4,4 +4,6 @@
 
 Gets a Ranger Id and Logs Ranger Reports into database
 
-Only localList implemented so far
+#Live Heroku link:
+
+https://wildlifetrackergear5km.herokuapp.com/?
