@@ -19,7 +19,6 @@
     <header class="header">
         <h4 class="logo">Wildlife Tracker</h4>
     </header>
-    <!-- Hero Section -->
 
     <div class="container-fluid" style="background-color: greenyellow">
         <h4>Report Animals</h4>
@@ -48,10 +47,85 @@
                     <button type="submit" class="btn btn-primary">Post Sighting</button>
             </div>
         </form>
+        <form action="/reportEndangeredAnimals/Post" method="post">
+            <div class="form-group">
+                <h4>Post Here If you saw endangered animals</h4>
+                <br>
+                <select name="animalSpotted" class="form-select" aria-label="Default select example">
+                    <option selected>Select the Animal Sighted</option>
+                    <option  value="White_Lion">White Lion</option>
+                    <option  value="Rhino">Giraffe</option>
+                    <option  value="Leopard">Zebra</option>
+                </select>
+                <select name="animalLocation" class="form-select" aria-label="Default select example">
+                    <option selected>Select Location</option>
+                    <option value="North Region">North Region</option>
+                    <option value="Central Region">Central Region</option>
+                    <option value="South Region">South Region</option>
+                </select>
+                <select name="animalStatus" class="form-select" aria-label="Default select example">
+                    <option selected>What is the status of the Animal You Saw?</option>
+                    <option value="healthy">Healthy</option>
+                    <option value="okay">Okay</option>
+                    <option value="ill">ill</option>
+                </select>
+                <select name="animalage" class="form-select" aria-label="Default select example">
+                    <option selected>What is the status of the Animal You Saw?</option>
+                    <option value="adult">Adult</option>
+                    <option value="young">young</option>
+                    <option value="newborn">newborn</option>
+                </select>
+                <br>
+                <br>
+                <label for="animalCount">How many did you See?</label>
+                <input id="animalCount" name="animalCount" class="form-control" type="text" >
+                <br>
+                <button type="submit" class="btn btn-primary">Post Sighting</button>
+            </div>
+        </form>
         <form action="/">
             <button class="btn btn-primary">Back to Homepage</button>
         </form>
-    </div>
+
+       <!-- <form action="/reportAnimals/Post" method="post">
+            <div class="form-group">
+                <label for="rangerName">Enter Username</label>
+                <input id="rangerName" name="rangerName" class="form-control" type="text" >
+                <br>
+                <br>
+            </div>
+            {{#each animalSpecies}}
+            <p>{{name}}</p>
+            {{/each}}
+            <div class="form-group">
+                <select name="animalLocation" class="form-select" aria-label="Default select example">
+                    <option selected>Select Location</option>
+                    <option value="North Region">North Region</option>
+                    <option value="Central Region">Central Region</option>
+                    <option value="South Region">South Region</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <br>
+                <label for="animalCount">How many did you See?</label>
+                <input id="animalCount" name="animalCount" class="form-control" type="text" >
+                <br>
+            </div>
+                {{#if isEndangered}}
+                    <select name="animalStatus" class="form-select" aria-label="Default select example">
+                        <option selected>What is the status of the Animal You Saw?</option>
+                        <option value="healthy">Healthy</option>
+                        <option value="okay">Okay</option>
+                        <option value="ill">ill</option>
+            </select>
+                {{/if}}
+                <button type="submit" class="btn btn-primary">Post Sighting</button>
+        </form>
+
+        <form action="/">
+            <button class="btn btn-primary">Back to Homepage</button>
+        </form>
+    </div>-->
 
     <!-- Stats Gallery Section -->
     <!-- Footer Section -->

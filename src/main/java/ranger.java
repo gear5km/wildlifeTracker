@@ -7,5 +7,9 @@ public class ranger{
         this.name =name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     static ArrayList<ranger> employeeList = new ArrayList<ranger>();
 }

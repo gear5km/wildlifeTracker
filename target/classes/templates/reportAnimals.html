@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Light Theme</title>
+    <!-- Bootstrap core CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <h4 class="logo">Wildlife Tracker</h4>
+    </header>
+    <!-- Hero Section -->
+
+    <div class="container-fluid" style="background-color: greenyellow">
+        <h4>Report Animals</h4>
+        <form action="/reportAnimals/Post" method="post">
+            <div class="form-group">
+                <label for="rangerName">Enter Username</label>
+                <input id="rangerName" name="rangerName" class="form-control" type="text" >
+                <br>
+                <select name="animalSpotted" class="form-select" aria-label="Default select example">
+                    <option selected>Select the Animal Sighted</option>
+                    <option  value="Lion">Lion</option>
+                    <option  value="Giraffe">Giraffe</option>
+                    <option  value="Zebra">Zebra</option>
+                </select>
+                <select name="animalLocation" class="form-select" aria-label="Default select example">
+                    <option selected>Select Location</option>
+                    <option value="North Region">North Region</option>
+                    <option value="Central Region">Central Region</option>
+                    <option value="South Region">South Region</option>
+                </select>
+                <br>
+                <br>
+                <label for="animalCount">How many did you See?</label>
+                <input id="animalCount" name="animalCount" class="form-control" type="text" >
+                <br>
+                    <button type="submit" class="btn btn-primary">Post Sighting</button>
+            </div>
+        </form>
+        <form action="/">
+            <button class="btn btn-primary">Back to Homepage</button>
+        </form>
+    </div>
+
+    <!-- Stats Gallery Section -->
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p class="hero_header">Communicate with Head office Directly</p>
+        <div class="button">EMAIL US </div>
+    </footer>
+    <!-- Copyrights Section -->
+    <div class="copyright">&copy;2019 - <strong>GRID</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
