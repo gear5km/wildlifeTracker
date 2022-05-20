@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class checkAnimal {
     @Test
     void checkIfEndangered(){
-        endangeredAnimals testanimal= new endangeredAnimals(1,"testAnimal",3,4,"healthy");
+        endangeredAnimals testanimal= new endangeredAnimals(1,"testAnimal",3,"","healthy");
         assertEquals(true, testanimal.isEndangered);
     }
 

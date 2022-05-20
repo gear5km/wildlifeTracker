@@ -1,9 +1,8 @@
 CREATE DATABASE wildlife_tracker IF NOT EXISTS;
-CREATE TABLE IF NOT EXISTS animals(
-    id INTEGER
+CREATE TABLE IF NOT EXISTS sightings(
     name VARCHAR
-    count INTEGER
     location VARCHAR
+    count INTEGER
     reportedby VARCHAR
     reportedat TIMESTAMP
 )
