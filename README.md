@@ -18,7 +18,7 @@ open localhost 4567 to view webpages
 
 Database for Animals is on the cloud
 
-Standard MIT License
+There may be sync problems when accessing the postgres server from heroku due to some required updates
 
 # License
 
