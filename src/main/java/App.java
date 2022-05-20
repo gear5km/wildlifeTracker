@@ -71,10 +71,10 @@ public class App {
             int reportedAnimalCount = Integer.parseInt(request.queryParams("animalCount")); // Sets the number of Animals spotted
             String reportedAnimalLocation = request.queryParams("animalLocation");// Sets the location of the animal spotted
             String reportedAnimalStatus =request.queryParams("animalStatus");// Sets the status of the (endangered) animal spotted
-            int reportedAnimalAge = Integer.parseInt(request.queryParams("animalage"));// Sets the age of the (endangered) animal spotted
+            String reportedAnimalAge = request.queryParams("animalage");// Sets the age of the (endangered) animal spotted
 
 
-            Animals reportedEndangeredAnimal= new endangeredAnimals(0,"",0,0,"");// Creates a new reported animal object empty until set, see bellow
+            endangeredAnimals reportedEndangeredAnimal= new endangeredAnimals(0,"",0,"","");// Creates a new reported animal object empty until set, see bellow
 
             reportedEndangeredAnimal.setName(reportedAnimalName); // Sets reported animal name, based on dropdown selection
             reportedEndangeredAnimal.setCount(reportedAnimalCount); // Sets reported animal name, based on ranger input
